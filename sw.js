@@ -1,6 +1,6 @@
 // Copia offline del canzoniere. La pagina principale si prende sempre da internet
 // se possibile (così gli aggiornamenti arrivano subito), altrimenti dalla copia salvata.
-const CACHE = 'canzoniere-ec864caa';
+const CACHE = 'canzoniere-03b8dcf9';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE && k.startsWith('canzoniere-')).map(k => caches.delete(k))))
